@@ -1,0 +1,27 @@
+<h1>Person Info</h1>
+<h3>Name: {{ person.name }}</h3>
+<h3>Age: {{ person.age }}</h3>
+
+
+{{!-- Emmet: table>tr*5>th+td  --}}
+<table border="1">
+   <tr>
+      <th colspan="2">MOTORBIKE</th>
+   </tr>
+   <tr>
+      <th>Brand</th>
+      <td>{{ motorbike.brand }}</td>
+   </tr>
+   <tr>
+      <th>Model</th>
+      <td>{{ motorbike.model }}</td>
+   </tr>
+   <tr>
+      <th>Color</th>
+      <td>{{ motorbike.color }}</td>
+   </tr>
+   <tr>
+      <th>Price</th>
+      <td>{{ motorbike.price }}$</td>
+   </tr>
+</table>

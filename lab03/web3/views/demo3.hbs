@@ -1,0 +1,23 @@
+<table class="table table-primary">
+   <tr class="text-center">
+      <th class="text text-danger h3"colspan="6">STUDENT LIST</th>
+   </tr>
+   <tr class="text text-success">
+      <th>No.</th>
+      <th>Name</th>
+      <th>DoB</th>
+      <th>Gender</th>
+      <th>Mobile</th>
+      <th>Email</th>
+   </tr>
+   {{#each students }}
+      <tr>
+         <th>{{ this.id }}</th>
+         <th>{{ this.name }}</th>
+         <th>{{ this.dob }}</th>
+         <th>{{ this.gender }}</th>
+         <th>{{ this.mobile }}</th>
+         <th>{{ this.email }}</th>
+      </tr>
+   {{/each}}
+</table>

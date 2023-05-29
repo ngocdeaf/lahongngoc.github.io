@@ -1,0 +1,17 @@
+<table border="1">
+   <tr>
+      <th colspan="3">Employee List</th>
+   </tr>
+   <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+   </tr>
+   {{#each employees }}
+   <tr>
+      <th>{{ name }}</th>
+      <th>{{ age }}</th>
+      <th>{{ gender }}</th>
+   </tr>
+   {{/each}}
+</table>
