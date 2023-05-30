@@ -9,14 +9,9 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-//khai báo & sử dụng thư viện body-parser để lấy dữ liệu nhập vào
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended : false}));
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -42,9 +37,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-//change server port
-var port = 5000
-app.listen(port);
 
 module.exports = app;
