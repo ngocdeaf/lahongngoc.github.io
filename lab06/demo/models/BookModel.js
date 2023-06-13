@@ -5,10 +5,12 @@ var BookSchema = mongoose.Schema ({
     author : String,
     genre : String,
     Price : Number,
-    Cover : String
+    Cover : String,
+    publisher : String,
+    video : String
 });
 
-const BookModel = mongoose.Model("BOOK", BookSchema, "book");
+const BookModel = mongoose.model("BOOK", BookSchema, "book");
 //book : tên collection
 
 module.exports = BookModel;

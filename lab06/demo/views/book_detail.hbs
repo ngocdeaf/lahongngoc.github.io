@@ -1,0 +1,43 @@
+<div class="container col-md-8 mt-3 mb-3">
+    <div class="row">
+        <div class="col">
+            <h1>{{ book.name }}</h1>
+            <iframe width="200" height="150" src="https://www.youtube.com/embed/{{ book.video }}">
+            </iframe>
+        </div>
+        <div class="col">
+            <table class="table table-bordered">
+                <tr>
+                    <th colspan="2">BOOK INFORMATION</th>
+                </tr>
+                <tr>
+                    <th>Book Author</th>
+                    <td>{{ book.author }}</td>
+                </tr>
+                <tr>
+                    <th>Book Genre</th>
+                    <td>{{ book.genre }}</td>
+                </tr>
+                <tr>
+                    <th>Book Price</th>
+                    <td>{{ book.Price }}</td>
+                </tr>
+                <tr>
+                    <th>Book Publisher</th>
+                    <td>{{ book.publisher}}</td>
+                </tr>
+                <tr class="text-center">
+                    <th colspan="2">
+                        <form action="" method="post">
+                            <input type="hidden" name="title" value={{book.title}}>
+                            <input type="hidden" name="price" value={{book.price}}>
+                            <input type="number" name="quantity" min="1" max="{{book.quantity}}">
+                            <input type="submit" class = "btn btn-primary" value = "ORDER">
+                            </input>
+                        </form>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

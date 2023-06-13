@@ -1,0 +1,42 @@
+<div class="container text-center col-md-9 mt-3 mb-3 bg-light">
+    <table class="table table-bordered">
+        <tr>
+            <th colspan="6">
+                <h1 class = "text text-secondary">BOOK LIST</h1>
+            <th>
+                <a class = "btn btn-primary" href="/add">Add</a>
+                <a class = "btn btn-secondary" href="/add">Delete All</a>
+            </th>
+            </th>
+        </tr>
+        <tr>
+            <th class="text text-success h5">Book Title</th>
+            <th class="text text-success h5" >Book Genre</th>
+            <th class="text text-success h5">Book Author</th>
+            <th class="text text-success h5">Book Price</th>
+            <th class="text text-success h5">Book Publisher</th>
+            <th class="text text-success h5">Book Cover</th>
+            <th class="text text-success h5">Actions</th>
+        </tr>
+        {{#each books}}
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ genre }}</td>
+            <td>{{ author }}</td>
+            <td>${{ Price }}</td>
+            <td>{{ publisher }}</td>
+            <td>
+                <a href="/detail/{{ _id}}">
+                <img src="{{ Cover}}" width="100" height="150">
+                </a>
+            </td>
+            <td>
+                <a class = "btn btn-warning " href="/edit/{{_id}}">Edit</a>
+                <a class = "btn btn-danger " href="/delete/{{_id}}"
+                onclick = "return confirm ('Are you sure to delete this book?');">Delete</a>
+                
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

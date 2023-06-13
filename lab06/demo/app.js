@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended : false}));
 
 // Cấu hình mongoose (làm việc với DB)
 var mongoose = require('mongoose');
-var uri = "mongodb+srv://Langoc:FNwrjNV4VbZmaAdZ@cluster0.ynout2p.mongodb.net/gch1102"; //gch1102 : DB's name
+var uri = "mongodb+srv://Langoc:FNwrjNV4VbZmaAdZ@cluster0.ynout2p.mongodb.net/GCH1102"; //gch1102 : DB's name
 mongoose.connect(uri)
 .then(() => {console.log ("succeed!")})
 .catch((err) => { console.log ("Failed!") });
